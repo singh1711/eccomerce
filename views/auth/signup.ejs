@@ -1,0 +1,44 @@
+<%-include('../partials/header')%>
+<%-include('../partials/navbar')%>
+
+
+<div class="row" style="margin-top: 80px;">
+    <div class="col-6 mx-auto">
+        <h1 class="display-6">Sign Up Form</h1>
+        <form action="/register" method="POST">
+            <div class="mb-3">
+                <label for="username" class="form-label">Username: </label>
+                <input type="text" class="form-control" name="username" id="username" placeholder="Name of User" required>
+            </div>
+            <div class="mb-3">
+                <label for="mail" class="form-label">Email: </label>
+                <input type="email" class="form-control" name="email" id="mail" placeholder="Email of User" required>
+            </div>
+            <div class="mb-3">
+                <label for="gender" class="form-label">Gender: </label>
+                <input class="form-control" type="text" name="gender" id="gender" placeholder="Gender of User" required>
+            </div>
+            <div class="mb-3">
+                <p class="mt-2">Want to register as?</p>
+                <div>
+                    <label for="role" class="form-label">Buyer: </label>
+                    <input type="radio" class="form-check-input" name="role" id="role" placeholder="Role of User" value="Buyer" required>
+                </div>
+                <div>
+                    <label for="role" class="form-label">Seller: </label>
+                    <input type="radio" class="form-check-input" name="role" id="role" placeholder="Role of User" value="Seller">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password: </label>
+                <input type="password" class="form-control"  name="password" id="password" rows="5" placeholder="Password of User" required></>
+            </div>
+            <button type="submit" class="btn btn-sm btn-success">Sign Up</button>
+            <p class="mt-2">Already have account? <a href="/login">Login Now</a></p>
+        </form>
+    </div>
+</div>
+
+
+<script src="/js/script.js"></script>
+<%-include('../partials/footer')%>
