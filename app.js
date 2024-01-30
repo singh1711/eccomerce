@@ -17,7 +17,6 @@ const User = require('./models/User');
 const dotenv = require('dotenv').config();
 
 mongoose.set('strictQuery', true);
-//let url ='mongodb+srv://abhisheksingh171197:160766@cluster0.pkonut5.mongodb.net/ecommerceretryWrites=true&w=majority'
 mongoose.connect(process.env.mongo_url)
 .then(()=>{console.log("DB connected")})
 .catch((err)=>{console.log(err)})
